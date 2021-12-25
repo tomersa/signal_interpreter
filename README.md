@@ -21,10 +21,12 @@ Signal [SigCgt] -> ('INT', 'TERM', '32', '33')
 ```
 
 On pid 9809 (ignore_term.py), The output of `$ sig 9809` is:
+```bash
 Signal [SigPnd] -> ()
 Signal [SigBlk] -> ()
 Signal [SigIgn] -> ('PIPE', 'TERM', 'XFSZ')
 Signal [SigCgt] -> ('INT', '32', '33')
+```
 
 * Notice how TERM signal is Ignored. Because of the line:
 ```python
