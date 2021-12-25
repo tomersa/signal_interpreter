@@ -1,10 +1,11 @@
 # signal_interpreter
 
 An example of how to use the signal interpreter to tell the signal the process is catching(SigCgt) and ignoring(SigIgn)
-
+```bash
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 tomer       9794  0.0  0.0  16620  9440 pts/2    S+   00:14   0:00 python3 ./catch_term.py
 tomer       9809  0.0  0.0  16620  9336 pts/0    S+   00:14   0:00 python3 ./ignore_term.py
+```
 
 On pid 9794 (catch_term.py), The output of `$ sig 9794` is:
 ```bash
