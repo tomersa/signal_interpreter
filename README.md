@@ -1,4 +1,4 @@
-# signal_interpreter
+# Signal Interpreter
 
 An example of how to use the signal interpreter to tell the signal the process is catching(SigCgt) and ignoring(SigIgn)
 ```bash
