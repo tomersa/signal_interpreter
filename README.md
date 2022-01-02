@@ -15,10 +15,8 @@ Signal [SigIgn] -> ('PIPE', 'XFSZ')
 Signal [SigCgt] -> ('INT', 'TERM', '32', '33')
 ```
 
-* Notice how SigCgt contains the 'TERM' since it is catching the 'TERM' signal. Because of the line:
-```python
-	signal.signal(signal.SIGTERM, signal_handler)
-```
+* Notice how SigCgt contains the 'TERM' since it's catching the 'TERM' signal:
+[signal.signal(signal.SIGTERM, signal_handler)](https://github.com/tomersa/signal_interpreter/blob/main/catch_term.py#L15)
 
 On pid 9809 (ignore_term.py), The output of `$ sig 9809` is:
 ```bash
@@ -28,8 +26,6 @@ Signal [SigIgn] -> ('PIPE', 'TERM', 'XFSZ')
 Signal [SigCgt] -> ('INT', '32', '33')
 ```
 
-* Notice how the 'TERM' signal is Ignored. Because of the line:
-```python
-    signal.signal(signal.SIGTERM, signal.SIG_IGN)
-```
+* Notice how the 'TERM' signal is Ignored here:
+[signal.signal(signal.SIGTERM, signal.SIG_IGN)](https://github.com/tomersa/signal_interpreter/blob/main/ignore_term.py#L10)
 
